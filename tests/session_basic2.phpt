@@ -14,7 +14,7 @@ ini_set ('session.save_path', MEMC_SERVER_HOST . ':' . MEMC_SERVER_PORT);
 
 ob_start();
 
-session_start();
+session_start(['lazy_write'=>TRUE]);
 $_SESSION['foo'] = 1;
 session_write_close();
 

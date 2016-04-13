@@ -21,7 +21,9 @@ session_write_close();
 $_SESSION = NULL;
 
 var_dump($_SESSION);
-session_start();
+session_start([
+	'read_and_close' => true
+]);
 var_dump($_SESSION);
 session_write_close();
 
